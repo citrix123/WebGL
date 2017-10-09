@@ -45,13 +45,20 @@ DO NOT EDIT!
 <canvas id="example" width="32" height="32"></canvas>
 <div id="description"></div>
 <div id="console"></div>
+
+<button onclick="runMytest()" > Run </button>
+
 <script>
-"use strict";
-function testPrologue(gl) {
-    return true;
+
+function runMytest() {
+	"use strict";
+	function testPrologue(gl) {
+	    return true;
+	}
+
+	generateTest("R8", "RED", "UNSIGNED_BYTE", testPrologue, "../../../resources/", 2)();
 }
 
-generateTest("R8", "RED", "UNSIGNED_BYTE", testPrologue, "../../../resources/", 2)();
 </script>
 </body>
 </html>
